@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Barlow:wght@600&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+:root {
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--Off-black);
+    background-color: var(--Light-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+    padding: 2rem;
+    max-width: 520px;
+    border-radius: 1rem;
+    border-bottom-right-radius: 30%;
+}
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.form-group {
+    color: var(--Smokey-grey);
+    letter-spacing: 3px;
+}
+.form-group input {
+    width: 80%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--Light-grey);
+    border-radius: 0.3rem;
+    font-family: inherit;
+    font-size: 1.3rem;
+}
+span .error {
+    display: inline-block;
+    color: var(--Light-red);
+    font-size: 0.7rem;
+    font-weight: 700;
+} 
+.btn {
+    margin: 0 auto;
+    border: none;
+    background-color: var(--Purple);
+    border-radius: 50%;
+    font-family: inherit;
+    cursor: pointer;
+    padding: .8rem 1rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.btn img {
+    width: 2rem;
+}
+.btn:hover {
+    background-color: var(--Light-red);
+}
+.result {
+    font-weight: 1;
+    font-size: 2rem;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+.result span {
+    color: var(--Purple);
+}
+.confetti {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    user-select: none;
+}
+.can {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow-y: hidden;
+}
+
+
+@media screen and (max-width:400px) {
+    .container {
+        max-width:300px
+    }
+
+    .result {
+        font-size: 1.3rem;
+    }
+
+    .form-group input {
+        width: 100%;
+        font-size: .8rem;
+    }
+
+    .form-group span.error {
+        font-size: .5rem;
+        margin-top: .2rem;
+        width: 100%;
+    }
+}
